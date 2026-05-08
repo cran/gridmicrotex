@@ -1,0 +1,27 @@
+The following third-party components are shipped with this package.
+Full license texts are reproduced in the LICENSE.note file at the
+package root, and copies of the font licenses accompany the fonts in
+inst/fonts/.
+
+-------------------------------------------------------------------------------
+MicroTeX C++ library  (src/MicroTeX/)
+-------------------------------------------------------------------------------
+Copyright (c) 2020 Nano Michael.
+Upstream: https://github.com/NanoMichael/MicroTeX
+License:  MIT License.
+
+-------------------------------------------------------------------------------
+Lete Sans Math  (inst/fonts/LeteSansMath.otf)
+-------------------------------------------------------------------------------
+Copyright (c) 2024-2026 Chenjing Bu and Daniel Flipo.
+Upstream: https://ctan.org/pkg/lete-sans-math
+License:  SIL Open Font License, Version 1.1
+          (see inst/fonts/OFL.txt).
+
+-------------------------------------------------------------------------------
+STIX Two Math  (inst/fonts/STIXTwoMath-Regular.otf)
+-------------------------------------------------------------------------------
+Copyright 2001-2021 The STIX Fonts Project Authors.
+Upstream: https://github.com/stipub/stixfonts
+License:  SIL Open Font License, Version 1.1
+          (see inst/fonts/OFL.txt).

@@ -1,0 +1,38 @@
+Package: gridmicrotex
+Title: Native 'LaTeX' Math Rendering for Grid Graphics
+Version: 0.0.1
+Authors@R: c(
+    person("Alim", "Dayim", role = c("aut", "cre"),
+           email = "ad938@cam.ac.uk",
+           comment = c(ORCID = "0000-0001-9998-7463")),
+    person("Nano", "Michael", role = "cph",
+           comment = "Author of included 'MicroTeX' library"),
+    person(family = "Bundled math font authors", role = "cph",
+           comment = "See inst/COPYRIGHTS for the full list of authors of the bundled math fonts."))
+Description: Renders 'LaTeX' math equations as native R grid graphics objects
+    (grobs) using the 'MicroTeX' 'C++' library as the layout engine. Produces
+    resolution-independent vector output that works on any R graphics device,
+    with no external 'LaTeX' installation required.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.3
+SystemRequirements: C++17, FreeType (>= 2.9), pkg-config
+Depends: R (>= 4.2.0)
+LinkingTo: Rcpp, systemfonts
+Imports: grDevices, grid, Rcpp, systemfonts, tools
+Suggests: ggplot2 (>= 4.0.0), knitr, ragg, rmarkdown, S7, testthat (>=
+        3.0.0), vdiffr
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+URL: https://github.com/adayim/gridmicrotex,
+        https://adayim.github.io/gridmicrotex/
+BugReports: https://github.com/adayim/gridmicrotex/issues
+NeedsCompilation: yes
+Packaged: 2026-05-05 13:49:14 UTC; alim
+Author: Alim Dayim [aut, cre] (ORCID: <https://orcid.org/0000-0001-9998-7463>),
+  Nano Michael [cph] (Author of included 'MicroTeX' library),
+  Bundled math font authors [cph] (See inst/COPYRIGHTS for the full list
+    of authors of the bundled math fonts.)
+Maintainer: Alim Dayim <ad938@cam.ac.uk>
+Repository: CRAN
+Date/Publication: 2026-05-08 15:00:02 UTC
