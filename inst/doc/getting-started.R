@@ -5,21 +5,70 @@ knitr::opts_chunk$set(
   dpi = 300,
   dev = "ragg_png"
 )
-library(gridmicrotex)
+
 
 ## ----basic, fig.height=0.8, fig.width=2, out.width="50%"----------------------
+library(gridmicrotex)
+library(grid)
+
 g <- latex_grob("\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}", gp = grid::gpar(fontsize = 24))
 grid::grid.newpage()
 grid::grid.draw(g)
 
-## ----quick, fig.height=0.8, fig.width=2, out.width="50%"----------------------
+## ----quick, fig.height=0.8, fig.width=3, out.width="40%"----------------------
 grid::grid.newpage()
-grid.latex("\\sum_{i=1}^{n} x_i^2", gp = grid::gpar(fontsize = 28))
+grid.latex("$\\sum_{i=1}^{n} x_i^2$", gp = grid::gpar(fontsize = 28))
 
-## ----positioning, fig.height=1.2, fig.width=2, out.width="50%"----------------
+## ----positioning, fig.height=1.2, fig.width=3.5, out.width="40%"--------------
 grid::grid.newpage()
-grid.latex("Famous $E = mc^2$", x = 0.2, y = 0.7, hjust = 0, gp = grid::gpar(fontsize = 24))
-grid.latex("F = ma", x = 0.2, y = 0.3, hjust = 0, gp = grid::gpar(fontsize = 24), input_mode = "math")
+grid.latex("Famous $E = mc^2$", x = 0.1, y = 0.7, hjust = 0, gp = grid::gpar(fontsize = 24))
+grid.latex("F = ma", x = 0.1, y = 0.3, hjust = 0, gp = grid::gpar(fontsize = 24), input_mode = "math")
+
+## ----baseline-align, fig.height=0.8, fig.width=4.5, out.width="60%"-----------
+grid::grid.newpage()
+y <- 0.5
+grid::grid.segments(unit(0, "npc"), unit(y, "npc"),
+                    unit(1, "npc"), unit(y, "npc"),
+                    gp = grid::gpar(col = "grey80"))
+grid::grid.text("if ", x = 0.10, y = y, just = c(0, 0.5),
+                gp = grid::gpar(fontsize = 16))
+grid.latex("$x \\geq \\sqrt{2\\pi}$",
+           x = 0.22, y = y,
+           hjust = "left", vjust = "baseline",
+           gp = grid::gpar(fontsize = 16))
+grid::grid.text(", then proceed.", x = 0.62, y = y, just = c(0, 0.5),
+                gp = grid::gpar(fontsize = 16))
+
+## ----mark, fig.height=2.4, fig.width=5, out.width="70%"-----------------------
+g <- latex_grob(
+  r"($a^2 + b\mark{term}^2 \mark{equals}= c^2$)",
+  x = 0.5, y = 0.4,
+  gp = grid::gpar(fontsize = 28)
+)
+grid::grid.newpage()
+grid::grid.draw(g)
+
+# Callout 1: the "=" sign, pointed at from above.
+mk_eq <- grobMark(g, "equals")
+grid::grid.segments(mk_eq$x, mk_eq$y + unit(15, "mm"),
+                    mk_eq$x, mk_eq$y + unit(3, "mm"),
+                    arrow = grid::arrow(length = unit(2, "mm"), type = "closed"),
+                    gp = grid::gpar(col = "red"))
+grid::grid.text("equals", x = mk_eq$x, y = mk_eq$y + unit(18, "mm"),
+                gp = grid::gpar(col = "red", fontsize = 11))
+
+# Callout 2: the b^2 term, pointed at from below — the mark sits at the
+# end of the term, including the superscript's smaller scale.
+mk_bsq <- grobMark(g, "term")
+grid::grid.segments(mk_bsq$x - unit(6, "mm"), mk_bsq$y - unit(15, "mm"),
+                    mk_bsq$x - unit(2, "mm"), mk_bsq$y - unit(3, "mm"),
+                    arrow = grid::arrow(length = unit(2, "mm"), type = "closed"),
+                    gp = grid::gpar(col = "blue"))
+grid::grid.text("b² term",
+                x = mk_bsq$x - unit(7, "mm"),
+                y = mk_bsq$y - unit(18, "mm"),
+                just = "right",
+                gp = grid::gpar(col = "blue", fontsize = 11))
 
 ## ----colors, fig.height=0.6, fig.width=2, out.width="40%"---------------------
 latex_options(input_mode = "math") # Set math mode globally
@@ -58,7 +107,7 @@ dims
 grid::grid.newpage()
 grid.latex("x^2 + \\text{你好}", gp = grid::gpar(fontsize = 24, fontfamily = "sans"))
 
-## ----font-pairing, fig.height = 1, fig.width = 6, out.width="70%"-------------
+## ----font-pairing, fig.height = 0.4, fig.width = 2, out.width="70%"-----------
 grid::grid.newpage()
 grid.latex(
   "\\text{Theorem: } \\forall x \\in \\mathbb{R},\\; x^2 \\geq 0",
@@ -183,6 +232,15 @@ grid::grid.newpage()
 grid.latex("\\forall \\eps > 0, \\eps \\in \\RR", gp = grid::gpar(fontsize = 24))
 
 clear_macros()
+
+## ----def-inline, fig.height=0.7, fig.width=4, out.width="60%"-----------------
+grid::grid.newpage()
+grid.latex(
+  r"(\def\norm#1{\left\lVert #1 \right\rVert}
+      \def\inner#1#2{\langle #1, #2 \rangle}
+      \norm{\vec{v}} = \sqrt{\inner{\vec{v}}{\vec{v}}})",
+  gp = grid::gpar(fontsize = 24)
+)
 
 ## ----cache, eval=FALSE--------------------------------------------------------
 # latex_cache_info()       # size / max_size / hits / misses

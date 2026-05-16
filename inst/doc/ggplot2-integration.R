@@ -25,7 +25,14 @@ ggplot(df, aes(x, y,
   geom_latex() +
   scale_colour_identity() +
   scale_size_identity() +
-  theme_minimal()
+  labs(
+    x = "$\\beta_1 \\cdot x + \\beta_0$",
+    y = "$\\mathrm{mpg}$"
+  ) +
+  theme(
+    axis.title.x = element_latex(fontsize = 14),
+    axis.title.y = element_latex(fontsize = 14)
+  )
 
 ## ----regression-annotation, out.width="70%"-----------------------------------
 fit <- lm(mpg ~ wt, data = mtcars)
@@ -41,16 +48,4 @@ ggplot(mtcars, aes(wt, mpg)) +
   geom_smooth(method = "lm", se = FALSE) +
   annotate("latex", x = 4, y = 30, label = eq_label, size = 12) +
   theme_minimal()
-
-## ----element-axis, out.width="70%"--------------------------------------------
-ggplot(mtcars, aes(wt, mpg)) +
-  geom_point() +
-  labs(
-    x = "$\\beta_1 \\cdot x + \\beta_0$",
-    y = "$\\mathrm{mpg}$"
-  ) +
-  theme(
-    axis.title.x = element_latex(fontsize = 14),
-    axis.title.y = element_latex(fontsize = 14)
-  )
 
