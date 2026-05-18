@@ -1,11 +1,11 @@
-20dbf3479c28fe637a8d8e3ed3e83d47 *DESCRIPTION
+af17b7197b92213dae7063bd40462ad8 *DESCRIPTION
 55cc0d879e764ffa6017d146222e114d *LICENSE
 285ddd9175c100cb879d2cecef311a26 *LICENSE.note
 9f871862455abb846d4fca80c8281f25 *NAMESPACE
-0c95a0d3128f7550743b329edb7daf02 *NEWS.md
+f0189d1e36e6e635eb7d5db71e5d8128 *NEWS.md
 5b0867eb002bb6f8c2255c3650230334 *R/RcppExports.R
 9af104f6b0a7db84e33242110b1924a6 *R/cache.R
-b9ba974d640cd72b8cf1c84cd69676f7 *R/fonts.R
+cdf419032598037959c228692d1b30b7 *R/fonts.R
 5028cfafe458a7f0e65f3a399060fb20 *R/ggplot2-integration.R
 b5b49bc73a77f58c6a5f66c57f38101b *R/grid-builder.R
 dc0b08649faccb68c774846605fb7b5c *R/gridmicrotex-package.R
@@ -27,7 +27,7 @@ c5e51c298ac578e2a344e0db206ba946 *configure
 40939a5c74f5f88de2a0a85b43c012ce *inst/COPYRIGHTS
 ca7c78e8ca4fefb45de046637bbe51ba *inst/doc/getting-started.R
 7e546c66835def5074ab9f8bdebf0a21 *inst/doc/getting-started.Rmd
-3c503cd37c33af450760bb9aed57a6f6 *inst/doc/getting-started.html
+72495ed4ce2a6db90492273347cc9d5d *inst/doc/getting-started.html
 4b15890a502703682d50ba5110740883 *inst/doc/ggplot2-integration.R
 351b78d944a5531abf1956f0b5519f8a *inst/doc/ggplot2-integration.Rmd
 b5e8ba7361549708e5018f05312668e2 *inst/doc/ggplot2-integration.html
@@ -62,7 +62,7 @@ afaf72ffc625ff6e2927bd032e656c7f *man/latex_dims.Rd
 69370290d802032ad1684644d706214f *man/latex_options.Rd
 96435c2012e47216423798c60cbb55a6 *man/latex_tree.Rd
 0f2e562110d5295e98f2e69c34bd272f *man/latex_wrap.Rd
-fe232801ade091cbfc808d571af2e6c8 *man/load_font.Rd
+8adc7a1d6becdcbadc556216e4d67c1c *man/load_font.Rd
 27e9b4a5148d4529309e845c9a24bdda *man/quad_bezier.Rd
 b4b48b70395e979e8668fedea81b3029 *man/resolve_math_font.Rd
 a860a790edf6759d3466b2004a36cbeb *man/tex_pt_to_bigpt.Rd
@@ -89,8 +89,8 @@ fcf5a961aaf306d9d65a0ef20625b3f5 *src/MicroTeX/lib/atom/atom_fence.h
 b6cb4285d6a67b5a1bcc840fc26ae3de *src/MicroTeX/lib/atom/atom_frac.h
 88683ce03606b788e26c4ed549da86e2 *src/MicroTeX/lib/atom/atom_matrix.cpp
 1ee2594f7f05778134744e0c33664211 *src/MicroTeX/lib/atom/atom_matrix.h
-549e41374c8f910575c74ad57542ddee *src/MicroTeX/lib/atom/atom_misc.cpp
-1df9ad31c85d64854b6056b58eb39989 *src/MicroTeX/lib/atom/atom_misc.h
+45f2f306888128bf58a7115dae56af5c *src/MicroTeX/lib/atom/atom_misc.cpp
+a0c62dd2a14f745d4d0bbaca9a56391d *src/MicroTeX/lib/atom/atom_misc.h
 63b1e2f5a9e1ed40f4bed39702d5f6f9 *src/MicroTeX/lib/atom/atom_operator.cpp
 6652bfe2fb6950823b5288c341160a40 *src/MicroTeX/lib/atom/atom_operator.h
 53987c8072ca5b61f940e19f9c680d84 *src/MicroTeX/lib/atom/atom_root.cpp
@@ -126,7 +126,7 @@ a03dea3e6de8236dac79250d467e777a *src/MicroTeX/lib/box/box_single.h
 beefb0b3e5a2499f0bd18b30c2941b8a *src/MicroTeX/lib/core/debug_config.h
 153ed122315873924fb2c646d104537a *src/MicroTeX/lib/core/formula.cpp
 e98007beb4aabdf5fb146424dc9b8d94 *src/MicroTeX/lib/core/formula.h
-289e519cc1dcdd9c133b43dcb4c6c093 *src/MicroTeX/lib/core/formula_def.cpp
+d7cbf4a574ff27b04e6185ccec79a19d *src/MicroTeX/lib/core/formula_def.cpp
 8bff007878c0a9440dee833880de5597 *src/MicroTeX/lib/core/glue.cpp
 a61558ede8e7e5d0bdc168313432c2e3 *src/MicroTeX/lib/core/glue.h
 fcc7e4aaf67b03066a98eaf6965fad4f *src/MicroTeX/lib/core/localized_num.cpp
@@ -155,7 +155,7 @@ c26d2978839de885018e6d6d9bfef05c *src/MicroTeX/lib/macro/macro_boxes.h
 dca86e9adfefbd2ee5fe9abcfcde9b7a *src/MicroTeX/lib/macro/macro_colors.cpp
 ab988dc94922b048512325588ee5ee04 *src/MicroTeX/lib/macro/macro_colors.h
 bc19d6d38ce95ea426ee754ed3a8a6e4 *src/MicroTeX/lib/macro/macro_decl.h
-fb7840a30799b63aa9d18d1d11298f96 *src/MicroTeX/lib/macro/macro_def.cpp
+9da43170065866128286b64beac90906 *src/MicroTeX/lib/macro/macro_def.cpp
 d760dfd42c7193bb05596b315f92d110 *src/MicroTeX/lib/macro/macro_delims.cpp
 86447ec6c71487677db2883fb31414c6 *src/MicroTeX/lib/macro/macro_delims.h
 50229a3b0c4056c4a97f8c30b3226a7c *src/MicroTeX/lib/macro/macro_env.h
@@ -163,8 +163,8 @@ d760dfd42c7193bb05596b315f92d110 *src/MicroTeX/lib/macro/macro_delims.cpp
 f30015d3b220f48c623af01d921ecaaa *src/MicroTeX/lib/macro/macro_fonts.h
 f7eb5813a11531f7de4ea70d15dde4c2 *src/MicroTeX/lib/macro/macro_frac.cpp
 9816e66d7216ddbf1da78873ccac7d76 *src/MicroTeX/lib/macro/macro_frac.h
-a94cd01f6d37db2a76f96cb63cb0a88c *src/MicroTeX/lib/macro/macro_misc.cpp
-74d622d101f6098550a0926b44695c16 *src/MicroTeX/lib/macro/macro_misc.h
+0dada0a784c191ed4f72866c56d2e215 *src/MicroTeX/lib/macro/macro_misc.cpp
+195f3f96ca36342a4b34c7103e06f56b *src/MicroTeX/lib/macro/macro_misc.h
 e597c90e9559f1d74808918b8df57b49 *src/MicroTeX/lib/macro/macro_scripts.cpp
 058c699cd651e5e139b31dccd6ac7a6b *src/MicroTeX/lib/macro/macro_scripts.h
 0f1fe88ff63a7d2039252c7fd66fa2f7 *src/MicroTeX/lib/macro/macro_sizes.h
@@ -229,7 +229,7 @@ d12fdd10014278b21fb3195d22f2a818 *src/microtexconfig.h
 25b7900cf96f99609aa597901be3e243 *src/otf_math_reader.cpp
 ff25ea5ce597a194602ca3431113545c *src/parse_latex.cpp
 0e4d73c2100b3992f050e0205410629c *tests/testthat.R
-f848d1254da124438b2ac3ca629c858a *tests/testthat/Rplots.pdf
+082118de75484072dd6be76c5c4ce8d3 *tests/testthat/Rplots.pdf
 9c7169e98f5f2c87fc8af0e488796810 *tests/testthat/_snaps/visual-samples/cancel-variants.svg
 b7c857573759524d85d38bba5e8f391d *tests/testthat/_snaps/visual-samples/cases.svg
 130d9682e5c68d34a17bce4810656af3 *tests/testthat/_snaps/visual-samples/cfrac.svg
