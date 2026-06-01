@@ -1,6 +1,6 @@
 Package: gridmicrotex
 Title: Native 'LaTeX' Math Rendering for Grid Graphics
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(
     person("Alim", "Dayim", role = c("aut", "cre"),
            email = "ad938@cam.ac.uk",
@@ -28,11 +28,11 @@ URL: https://github.com/adayim/gridmicrotex,
         https://adayim.github.io/gridmicrotex/
 BugReports: https://github.com/adayim/gridmicrotex/issues
 NeedsCompilation: yes
-Packaged: 2026-05-17 20:52:56 UTC; alim
+Packaged: 2026-06-01 21:20:41 UTC; alim
 Author: Alim Dayim [aut, cre] (ORCID: <https://orcid.org/0000-0001-9998-7463>),
   Nano Michael [cph] (Author of included 'MicroTeX' library),
   Bundled math font authors [cph] (See inst/COPYRIGHTS for the full list
     of authors of the bundled math fonts.)
 Maintainer: Alim Dayim <ad938@cam.ac.uk>
 Repository: CRAN
-Date/Publication: 2026-05-18 07:10:02 UTC
+Date/Publication: 2026-06-01 21:40:54 UTC

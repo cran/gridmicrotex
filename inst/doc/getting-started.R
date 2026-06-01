@@ -212,6 +212,17 @@ grid.latex(
   render_mode = "path"
 )
 
+## ----lists, fig.height=1.4, fig.width=3, out.width="45%"----------------------
+grid::grid.newpage()
+grid.latex(paste0(
+  "\\begin{enumerate}",
+  "  \\item e^{i\\pi} + 1 = 0",
+  "  \\item \\begin{itemize}",
+  "           \\item \\alpha \\item \\beta",
+  "         \\end{itemize}",
+  "\\end{enumerate}"
+), gp = grid::gpar(fontsize = 20))
+
 ## ----options, eval=FALSE------------------------------------------------------
 # latex_options(math_font = "stix", render_mode = "typeface")
 # 
